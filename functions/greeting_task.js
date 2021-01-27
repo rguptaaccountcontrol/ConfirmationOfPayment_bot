@@ -12,28 +12,28 @@ exports.greeting_task = async function (context, event, callback, RB) {
     const Memory = JSON.parse(event.Memory);
      let { CurrentTaskConfidence } = event;
      let CurrentConfidencevalue = Number(CurrentTaskConfidence);
-    let date_ob = new Date();
-    let date = ("0" + date_ob.getDate()).slice(-2);
-    let month = ("0" + (date_ob.getMonth() + 1)).slice(-2);
-    let year = date_ob.getFullYear();
-    let cdate = month + "/" + date + "/" + year;
-    let LegalAnnounce;
-    let TypeOfPayment;
-    let AcctLastFourDigit;
+    // let date_ob = new Date();
+    // let date = ("0" + date_ob.getDate()).slice(-2);
+    // let month = ("0" + (date_ob.getMonth() + 1)).slice(-2);
+    // let year = date_ob.getFullYear();
+    // let cdate = month + "/" + date + "/" + year;
+    // let LegalAnnounce;
+    // let TypeOfPayment;
+    // let AcctLastFourDigit;
 
-    if (Memory.LegalAnnounce === undefined) LegalAnnounce = 'the payment of $400';
-    else LegalAnnounce = Memory.LegalAnnounce;
+    // if (Memory.LegalAnnounce === undefined) LegalAnnounce = 'the payment of $400';
+    // else LegalAnnounce = Memory.LegalAnnounce;
 
-    if (Memory.TypeOfPayment === undefined) TypeOfPayment = "ACH";
-    else TypeOfPayment = Memory.TypeOfPayment;
+    // if (Memory.TypeOfPayment === undefined) TypeOfPayment = "ACH";
+    // else TypeOfPayment = Memory.TypeOfPayment;
 
-    if (Memory.AcctLastFourDigit === undefined)
-    AcctLastFourDigit = 6104;
-    else AcctLastFourDigit = Memory.AcctLastFourDigit;
+    // if (Memory.AcctLastFourDigit === undefined)
+    // AcctLastFourDigit = 6104;
+    // else AcctLastFourDigit = Memory.AcctLastFourDigit;
 
-    console.log("TypeOfPayment: " + TypeOfPayment);
-    console.log("AcctLastFourDigit: " + AcctLastFourDigit);
-    console.log("LegalAnnounce: " + LegalAnnounce);
+    // console.log("TypeOfPayment: " + TypeOfPayment);
+    // console.log("AcctLastFourDigit: " + AcctLastFourDigit);
+    // console.log("LegalAnnounce: " + LegalAnnounce);
 
     if (Memory.check_cnt === undefined) {
       Remember.check_cnt = 0;
