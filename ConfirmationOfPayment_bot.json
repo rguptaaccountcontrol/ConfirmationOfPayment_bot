@@ -1,0 +1,231 @@
+{
+    "friendlyName" : "ConfirmationOfPayment_bot",
+    "logQueries" : true,
+    "uniqueName" : "ConfirmationOfPayment_bot",
+    "defaults" : {
+        "defaults" : {
+            "assistant_initiation" : "task://greeting",
+            "fallback" : "task://fallback",
+            "collect" : {
+                "validate_on_failure" : "task://collect_fallback"
+            }
+        }
+    },
+    "styleSheet" : {
+        "style_sheet" : {
+            "collect" : {
+                "validate" : {
+                    "on_failure" : {
+                        "repeat_question" : false,
+                        "messages" : [
+                            {
+                                "say" : {
+                                    "speech" : "I didn't get that. What did you say?"
+                                }
+                            },
+                            {
+                                "say" : {
+                                    "speech" : "I still didn't catch that. Please repeat."
+                                }
+                            },
+                            {
+                                "say" : {
+                                    "speech" : "Let's try one last time. Say it again please."
+                                }
+                            }
+                        ]
+                    },
+                    "on_success" : { "say" : { "speech" : "" } },
+                    "max_attempts" : 4
+                }
+            },
+            "voice" : {
+                "say_voice" : "Polly.Joanna-Neural"
+            },
+            "name" : ""
+        }
+    },
+    "fieldTypes" : [],
+    "tasks" : [
+        {
+            "uniqueName" : "agentTransfer",
+            "actions" : {
+                "actions" : [
+                    {
+                        "redirect" : "https://confirmationofpayment-1772-dev.twil.io/index"
+                    }
+                ]
+            },
+            "fields" : [],
+            "samples" : [
+                {
+                    "language" : "en-US",
+                    "taggedText" : "agent"
+                }
+            ]
+        },
+        {
+            "uniqueName" : "mainMenu",
+            "actions" : {
+                "actions" : [
+                    {
+                        "redirect" : "https://confirmationofpayment-1772-dev.twil.io/index"
+                    }
+                ]
+            },
+            "fields" : [],
+            "samples" : [
+                {
+                    "language" : "en-US",
+                    "taggedText" : "I need to check again"
+                },
+                {
+                    "language" : "en-US",
+                    "taggedText" : "I want to go to menu again"
+                },
+                {
+                    "language" : "en-US",
+                    "taggedText" : "I want to change options"
+                },
+                {
+                    "language" : "en-US",
+                    "taggedText" : "mainmenu"
+                },
+                {
+                    "language" : "en-US",
+                    "taggedText" : "main menu"
+                },
+                {
+                    "language" : "en-US",
+                    "taggedText" : "menu"
+                },
+                {
+                    "language" : "en-US",
+                    "taggedText" : "main"
+                }
+            ]
+        },
+        {
+            "uniqueName" : "ProcessPayment",
+            "actions" : {
+                "actions" : [
+                    {
+                        "redirect" : "https://confirmationofpayment-1772-dev.twil.io/index"
+                    }
+                ]
+            },
+            "fields" : [],
+            "samples" : [
+                {
+                    "language" : "en-US",
+                    "taggedText" : "push on"
+                },
+                {
+                    "language" : "en-US",
+                    "taggedText" : "carry on"
+                },
+                {
+                    "language" : "en-US",
+                    "taggedText" : "move forward"
+                },
+                {
+                    "language" : "en-US",
+                    "taggedText" : "move along"
+                },
+                {
+                    "language" : "en-US",
+                    "taggedText" : "push on"
+                },
+                {
+                    "language" : "en-US",
+                    "taggedText" : "go ahead"
+                },
+                {
+                    "language" : "en-US",
+                    "taggedText" : "move"
+                },
+                {
+                    "language" : "en-US",
+                    "taggedText" : "let's move"
+                },
+                {
+                    "language" : "en-US",
+                    "taggedText" : "continue"
+                },
+                {
+                    "language" : "en-US",
+                    "taggedText" : "proceed"
+                }
+            ]
+        },
+        {
+            "uniqueName" : "fallback",
+            "actions" : {
+                "actions" : [
+                    {
+                        "redirect" : "https://confirmationofpayment-1772-dev.twil.io/index"
+                    }
+                ]
+            },
+            "fields" : [],
+            "samples" : []
+        },
+        {
+            "uniqueName" : "greeting",
+            "actions" : {
+                "actions" : [
+                    {
+                        "redirect" : "https://confirmationofpayment-1772-dev.twil.io/index"
+                    }
+                ]
+            },
+            "fields" : [],
+            "samples" : [
+                {
+                    "language" : "en-US",
+                    "taggedText" : "repeat"
+                },
+                {
+                    "language" : "en-US",
+                    "taggedText" : "hi"
+                },
+                {
+                    "language" : "en-US",
+                    "taggedText" : "options"
+                },
+                {
+                    "language" : "en-US",
+                    "taggedText" : "again"
+                },
+                {
+                    "language" : "en-US",
+                    "taggedText" : "once more"
+                },
+                {
+                    "language" : "en-US",
+                    "taggedText" : "say that again"
+                },
+                {
+                    "language" : "en-US",
+                    "taggedText" : "Hi"
+                }
+            ]
+        },
+        {
+            "uniqueName" : "collect_fallback",
+            "actions" : {
+                "actions" : [
+                    {
+                        "say" : "Looks like I'm having trouble. Apologies for that. Let's start again, how can I help you today?"
+                    },
+                    { "listen" : true }
+                ]
+            },
+            "fields" : [],
+            "samples" : []
+        }
+    ],
+    "modelBuild" : {
+        "uniqueName" : "ConfirmationOfPayment_bot_26-1-2021_8.50.08pm"
+    }
+}
