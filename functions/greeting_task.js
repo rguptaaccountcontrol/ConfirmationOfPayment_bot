@@ -62,6 +62,8 @@ exports.greeting_task = async function (context, event, callback, RB) {
     //                console.log("check_cnt: " + Remember.check_cnt);
     // if (Remember.check_cnt <= 3 || Remember.check_cnt === undefined) {
       Say = `Before I process your payment, Let’s confirm-Today’s date is, , , , ${cdate},  , , ,  You are authorizing ${LegalAnnounce}. , to be taken from your ${TypeOfPayment}  account ending in ,   ${AcctLastFourDigit}. ,`;
+
+      Say=`You are in greeting task`;
       Redirect = "task://CallerOptions";
       //Say += Prompt;
 
