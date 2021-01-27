@@ -1,6 +1,8 @@
 const functions = Runtime.getFunctions();
+const CallerOptionsTaskHandler = require(functions["CallerOptions"].path);
 const mainMenuTaskHandler = require(functions["mainMenu_task"].path);
-const ProcessPaymentTaskHandler = require(functions["ProcessPayment_task"].path);
+const ProcessPaymentTaskHandler = require(functions["ProcessPayment_task"]
+  .path);
 const agentTransferTypeHandler = require(functions["agentTransfer_task"].path);
 const greetingTaskHandler = require(functions["greeting_task"].path);
 const collectFallbackTaskHandler = require(functions["collect_fallback_task"]
@@ -21,6 +23,16 @@ exports.handler = async (context, event, callback) => {
   // calling task handlers
   if (CurrentConfidencevalue === 1 || CurrentConfidencevalue === 0) {
     switch (CurrentTask) {
+      case "CallerOptions":
+        console.log("CallerOptions");
+        await CallerOptionsTaskHandler.CallerOptions_task(
+          context,
+          event,
+          callback,
+          responseBuilder.RB
+        );
+        break;
+
       case "mainMenu":
         console.log("mainMenu_task");
         await mainMenuTaskHandler.mainMenu_task(

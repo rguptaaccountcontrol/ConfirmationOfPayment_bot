@@ -12,6 +12,7 @@ exports.agentTransfer_task =async function(context, event, callback,RB) {
 
      Say = "Please wait while we transfer you to an agent  ";
      Remember.choice=3;
+     Listen = true;
     
     //End of your code.
    
