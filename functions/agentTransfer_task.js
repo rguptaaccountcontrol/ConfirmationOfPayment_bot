@@ -10,9 +10,9 @@ exports.agentTransfer_task =async function(context, event, callback,RB) {
     // Add your code here.
     const Memory = JSON.parse(event.Memory);
 
-     Say = "Please wait while we transfer you to an agent  ";
+     Say = "  ";
      Remember.choice=3;
-     Listen = true;
+     //Listen = true;
     
     //End of your code.
    
