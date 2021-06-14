@@ -52,7 +52,7 @@
             "actions" : {
                 "actions" : [
                     {
-                        "redirect" : "https://confirmationofpayment-7110-dev.twil.io/index"
+                        "redirect" : "https://confirmationofpayment-1709-dev.twil.io/index"
                     }
                 ]
             },
@@ -121,7 +121,7 @@
             "actions" : {
                 "actions" : [
                     {
-                        "redirect" : "https://confirmationofpayment-7110-dev.twil.io/index"
+                        "redirect" : "https://confirmationofpayment-1709-dev.twil.io/index"
                     }
                 ]
             },
@@ -162,7 +162,7 @@
             "actions" : {
                 "actions" : [
                     {
-                        "redirect" : "https://confirmationofpayment-7110-dev.twil.io/index"
+                        "redirect" : "https://confirmationofpayment-1709-dev.twil.io/index"
                     }
                 ]
             },
@@ -223,7 +223,7 @@
             "actions" : {
                 "actions" : [
                     {
-                        "redirect" : "https://confirmationofpayment-7110-dev.twil.io/index"
+                        "redirect" : "https://confirmationofpayment-1709-dev.twil.io/index"
                     }
                 ]
             },
@@ -235,7 +235,7 @@
             "actions" : {
                 "actions" : [
                     {
-                        "redirect" : "https://confirmationofpayment-7110-dev.twil.io/index"
+                        "redirect" : "https://confirmationofpayment-1709-dev.twil.io/index"
                     }
                 ]
             },
